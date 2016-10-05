@@ -153,3 +153,37 @@ tree 物件其實就是「資料夾」的代名詞。
 
 ## 解析 Git 資料結構 - 索引結構
 
+索引別名：
+
+* Index（索引）
+* Cache（快取）
+* Directory cache（目錄快取）
+* Current directory cache（當前目錄快取）
+* Staging area（等待被 commit 的地方）
+* Staged files（等待被 commit 的檔案）
+
+指令 `git diff —cached` 與 `git diff —staged` 同義。
+
+
+
+### 操作索引的指令
+
+四種檔案狀態：
+
+* untracked（未追蹤的，代表尚未被加入 Git 儲存庫的檔案狀態）
+* unmodified（未修改的，代表檔案第一次被加入，或是檔案內容與 HEAD 內容一致的狀態）
+* modified（已修改的，代表檔案已經被編輯過，或是檔案內容與 HEAD 內容不一致的狀態）
+* staged（等待被 commit 的，代表下次執行 git commit 會將這些檔案全部送入版本庫）
+
+
+
+`git status` 指令，是顯示出 **目前最新版** 與 **索引檔** 之間的差異。
+
+
+
+> 又有影片 good
+
+
+
+> 雖然有影片，但覺得影片中的圖片有點奇怪，所以只要聽內容就可以了。
+
