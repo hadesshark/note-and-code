@@ -233,4 +233,24 @@ tree 物件其實就是「資料夾」的代名詞。
 
 ## 認識 Git 物件的相對名稱
 
-http://ithelp.ithome.com.tw/articles/10136575 明天繼續。
+透過「相對名稱」找到特定 commit 後，用相對位置來找其他的 commit 物件。
+
+特殊符號 `^` 和 `~` 。
+
+> 這一章需要圖片會比較好理解。看不太懂他在講什麼。
+
+
+
+## 暫存工作目錄與索引的變更狀態
+
+`git stash`
+
+> 覺得要實作才比較清楚。
+
+> 實作完覺得很實用，但目前用不到。
+
+
+
+## Git for Windows 選項設定
+
+http://ithelp.ithome.com.tw/articles/10137473
