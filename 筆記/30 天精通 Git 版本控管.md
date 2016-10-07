@@ -312,3 +312,11 @@ tree 物件其實就是「資料夾」的代名詞。
 
 > 內容有 commit 刪除和修改
 
+
+
+## 設定 .gitignore 忽略清單
+
+排除一些不需要加入版控的檔案，僅限於 Untracked file，已經列入版控的檔案（Staged file），不受 .gitignore 檔案控制。
+
+> github 有 .gitignore 的快速設定。
+
