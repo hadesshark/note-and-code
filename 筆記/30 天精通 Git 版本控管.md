@@ -388,5 +388,15 @@ tree 物件其實就是「資料夾」的代名詞。
 
 
 
-## 了解 GitHub 的 fork 與 puhh request 版控流程
+## 了解 GitHub 的 fork 與 push request 版控流程
+
+> 專案可以透過 Setting > Collaborators 來增加開發人員，但這樣的增加人員可以任意 push pull
+
+
+
+> fork 可以把別人的專案 clone 一份到自己的帳號，接著可以把這個 clone 到自己的本地上修改。修改完的版本上傳回去到自己的帳號，當要回傳到原先 clone 的地方就要用 push request 等對方確認後就可以合併。
+
+
+
+
 
