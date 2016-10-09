@@ -374,5 +374,9 @@ tree 物件其實就是「資料夾」的代名詞。
 
 ## 多人在同一個遠端儲存庫中進行版控
 
-http://ithelp.ithome.com.tw/articles/10140133
+> 在最後 user1 遇到無法推送時，重新拉回以前的版本這個動作有點奇怪
+
+
+
+> 實作時發現，當有上傳 origin/master 時用指令上傳圖片上沒有反應，都要重新用 SourceTree push 才行
 
