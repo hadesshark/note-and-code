@@ -26,5 +26,6 @@ with open("test.htm", "rb") as f:
 
 etree_page = etree.HTML(html_unline_data.decode("utf-8"))
 __xpath_for_next_url = u"//div[@class='pg']/a[@class='nxt']/@href"
+
 temp_next_url = etree_page.xpath(__xpath_for_next_url)
 print(temp_next_url)
