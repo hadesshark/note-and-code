@@ -24,8 +24,20 @@ else:
 with open("test.htm", "rb") as f:
 	html_unline_data = f.read()
 
-etree_page = etree.HTML(html_unline_data.decode("utf-8"))
+etree_page = etree.HTML(html_unline_data)
 __xpath_for_next_url = u"//div[@class='pg']/a[@class='nxt']/@href"
 
 temp_next_url = etree_page.xpath(__xpath_for_next_url)
 print(temp_next_url)
+
+__xpath_for_content = u"//td[@class='t_f']//text()"
+temp_content = etree_page.xpath(__xpath_for_content)
+
+content_add_space = ''
+for item in temp_content:
+	content_add_space += item + '\n\n'
+
+# print(content_add_space.encode("utf-8"))
+f = open("novel_file/test.txt", "wb")
+f.write(content_add_space.encode("utf-8"))
+f.close()
