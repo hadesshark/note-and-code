@@ -3,6 +3,7 @@
 
 import requests
 from lxml import etree
+import os
 
 
 headers = {
@@ -18,4 +19,12 @@ if request_get.status_code == 200:
 else:
 	print("False")
 
-# print(page)
+#================================
+
+with open("test.htm", "rb") as f:
+	html_unline_data = f.read()
+
+etree_page = etree.HTML(html_unline_data.decode("utf-8"))
+__xpath_for_next_url = u"//div[@class='pg']/a[@class='nxt']/@href"
+temp_next_url = etree_page.xpath(__xpath_for_next_url)
+print(temp_next_url)

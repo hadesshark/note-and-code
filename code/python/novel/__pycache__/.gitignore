@@ -1,2 +1,10 @@
 __pycache__/
 *.pyc
+*.png
+*.jpg
+*.html
+*.htm
+*.gif
+*.js
+test_files/
+test_files
