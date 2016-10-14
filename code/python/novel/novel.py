@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import requests
+from lxml import etree
+
 
 headers = {
 	'User-Agent':
@@ -9,4 +11,11 @@ headers = {
 
 url = "http://ck101.com/thread-2462938-1-1.html"
 request_get = requests.get(url, headers=headers)
-print(request_get.text.encode('utf-8'))
+page = request_get.text.encode("Utf-8")
+
+if request_get.status_code == 200:
+	print("Tree")
+else:
+	print("False")
+
+# print(page)
