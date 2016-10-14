@@ -1,8 +1,5 @@
-#!/usr/bin/env/python
+#!/usr/local/bin/python3.5
 # -*- coding: utf-8 -*-
-
-# chinese can't use.
-# now use windows -> mac test try if can use.
 
 import requests
 
@@ -12,4 +9,4 @@ headers = {
 
 url = "http://ck101.com/thread-2462938-1-1.html"
 request_get = requests.get(url, headers=headers)
-print(request_get.text)
+print(request_get.text.encode('utf-8'))
