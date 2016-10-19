@@ -11,6 +11,8 @@ web scraper 會想到：
 
 ### 第一章 您的第一個 Scraper
 
+> Python 3 的 urllib 分為很多小模組。
+
 
 
 ## 附錄C 擷取網頁時的法律與道德考量
