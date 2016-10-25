@@ -75,7 +75,7 @@ web scraper 會想到：
 
 ### 第九章 爬過表單與登入頁
 
-
+> 知道 robot.txt 頁面。 直接在 url 後面加上 `/robots.txt` 就會有內容。
 
 
 
