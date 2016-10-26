@@ -81,6 +81,14 @@ web scraper 會想到：
 
 
 
+### 第十章 搜刮 JavaScript
+
+> Selenium 出現了，還講了一些 Javascript 等知識。
+
+
+
+
+
 ## 附錄C 擷取網頁時的法律與道德考量
 
 ### 商標、著作權、專利、天啊！
