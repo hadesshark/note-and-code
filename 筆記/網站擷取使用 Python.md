@@ -77,6 +77,8 @@ web scraper 會想到：
 
 > 知道 robot.txt 頁面。 直接在 url 後面加上 `/robots.txt` 就會有內容。
 
+> post  方法有點特別。
+
 
 
 ## 附錄C 擷取網頁時的法律與道德考量
