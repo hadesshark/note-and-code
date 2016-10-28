@@ -89,7 +89,9 @@ web scraper 會想到：
 
 ### 第十一章 影像處理與文字辨識
 
-
+> CAPTCHA ：就像是登入時為了防止 bot 所用的圖片，最後靠著輸入圖上的文字來完成登入。
+>
+> Pillow 和 Tesseract
 
 
 
