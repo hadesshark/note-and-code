@@ -97,7 +97,7 @@ web scraper 會想到：
 
 ### 第十二章 避開 Scraping 陷阱
 
-
+> 像我寫的小說爬蟲， headers 的不同會影響抓取的內容。
 
 
 
