@@ -105,7 +105,13 @@ web scraper 會想到：
 
 ### 第十三章 以 Scrapers 測試您的網站
 
+> 簡單來說就是 unittest 和 selenium 的使用。
 
+
+
+### 第十四章 遠端 Scraping
+
+> 最後一章，這章主要就是一些小叮嚀，關於長期使用爬蟲的介紹。
 
 
 
