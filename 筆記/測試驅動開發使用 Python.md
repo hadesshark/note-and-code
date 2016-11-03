@@ -15,6 +15,8 @@ assert 'Django' in browser.title
 
 
 
+> 第一章整體來說，就是後半段的 `functional_test.py` 加入資料夾之後使用 `git` 來做記錄。最有趣的就是兩個 `git` 沒有干擾，非常神奇。
+
 
 
 ### 第二章 以 unittest 模組擴充功能測試
