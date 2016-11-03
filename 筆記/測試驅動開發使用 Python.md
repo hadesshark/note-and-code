@@ -4,6 +4,15 @@
 
 ### 第一章 設定 Django ，使用功能測試
 
+~~~python
+from selenium import webdriver
+
+browser = webdriver.Firefox()
+browser.get('http://localhost:8000')
+
+assert 'Django' in browser.title
+~~~
+
 
 
 
