@@ -21,6 +21,8 @@ assert 'Django' in browser.title
 
 ### 第二章 以 unittest 模組擴充功能測試
 
+> 功能測試 == 接受度測試 == 雙端測試
+
 
 
 
