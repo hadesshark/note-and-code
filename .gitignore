@@ -2,3 +2,9 @@ code/python/novel/__pycache__
 code/python/novel/test_files
 test.htm
 *.pyc
+pip-selfcheck.json
+.Python
+geckodriver.log
+code/python/TDD/for_fox/bin
+code/python/TDD/for_fox/lib
+db.sqlite3

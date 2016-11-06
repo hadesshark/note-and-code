@@ -21,7 +21,36 @@ assert 'Django' in browser.title
 
 ### 第二章 以 unittest 模組擴充功能測試
 
+> 功能測試 == 接受度測試 == 雙端測試
 
+~~~python
+Traceback (most recent call last):
+  File "functional_test.py", line 3, in <module>
+    browser = webdriver.Firefox()
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/firefox/webdriver.py", line 80, in __init__
+    self.binary, timeout)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/firefox/extension_connection.py", line 52, in __init__
+    self.binary.launch_browser(self.profile, timeout=timeout)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/firefox/firefox_binary.py", line 68, in launch_browser
+    self._wait_until_connectable(timeout=timeout)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/firefox/firefox_binary.py", line 99, in _wait_until_connectable
+    "The browser appears to have exited "
+selenium.common.exceptions.WebDriverException: Message: The browser appears to have exited before we could connect. If you specified a log_file in the FirefoxBinary constructor, check it for details.
+~~~
+
+> 上面的內容可以知道，程式對於 url 的輸入產生問題了。
+
+
+
+> 用 chrome driver 在 mac 上無法成功顯示視窗
+
+
+
+> 經過測試要照以下步驟：
+>
+> 1. 先更新 selenium
+> 2. 下載 geckodriver
+> 3. 把 2. 的文件解壓縮後放到和 python 一樣的位置
 
 
 
