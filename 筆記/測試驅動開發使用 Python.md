@@ -56,6 +56,8 @@ selenium.common.exceptions.WebDriverException: Message: The browser appears to h
 
 ### 第三章 使用單元測試，來測試簡單的首頁
 
+> 不清楚為什麼要加入一個 lists 書上的說法完全看不懂。
+
 
 
 
