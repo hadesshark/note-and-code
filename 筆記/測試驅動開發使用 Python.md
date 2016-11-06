@@ -46,6 +46,14 @@ selenium.common.exceptions.WebDriverException: Message: The browser appears to h
 
 
 
+> 經過測試要照以下步驟：
+>
+> 1. 先更新 selenium
+> 2. 下載 geckodriver
+> 3. 把 2. 的文件解壓縮後放到和 python 一樣的位置
+
+
+
 ### 第三章 使用單元測試，來測試簡單的首頁
 
 
