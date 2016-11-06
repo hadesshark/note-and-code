@@ -2,10 +2,8 @@ code/python/novel/__pycache__
 code/python/novel/test_files
 test.htm
 *.pyc
-code/python/TDD/for_fox/bin
 pip-selfcheck.json
 .Python
-code/python/TDD/for_fox/include
-code/python/TDD/for_fox/lib
-code/python/TDD/for_fox/selenium
 geckodriver.log
+code/python/TDD/for_fox/bin
+code/python/TDD/for_fox/lib
