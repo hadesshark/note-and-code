@@ -8,3 +8,4 @@ pip-selfcheck.json
 code/python/TDD/for_fox/include
 code/python/TDD/for_fox/lib
 code/python/TDD/for_fox/selenium
+geckodriver.log
