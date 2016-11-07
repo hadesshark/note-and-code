@@ -60,6 +60,30 @@ selenium.common.exceptions.WebDriverException: Message: The browser appears to h
 
 
 
+```python
+Creating test database for alias 'default'...
+E
+======================================================================
+ERROR: test_root_url_resolves_to_home_page_view (lists.tests.HomePageTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 8, in test_root_url_resolves_to_home_page_view
+    found = resolve('/')
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 388, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]], 'path': ''}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+```
+
+
+
 
 
 ### 第四章 我們用這些測試來做什麼？
