@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+# 在這複創造你的 view
+home_page = None
