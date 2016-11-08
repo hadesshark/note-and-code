@@ -94,7 +94,29 @@ Destroying test database for alias 'default'...
 
 ### 第四章 我們用這些測試來做什麼？
 
+~~~python
+'NoneType' object has no attribute 'path'
+E
+======================================================================
+ERROR: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "functional_test.py", line 21, in test_can_start_a_list_and_retriveve_it_later
+    header_text = self.browser.find_element_by_tag_name('h1').text
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 389, in find_element_by_tag_name
+    return self.find_element(by=By.TAG_NAME, value=name)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: h1
+~~~
 
+
+
+> 錯誤雖然不是和書上一樣，但表達的內容是一樣的。
 
 
 
