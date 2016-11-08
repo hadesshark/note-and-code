@@ -88,6 +88,10 @@ Destroying test database for alias 'default'...
 
 
 
+> 第三章結束，主要就是建立一個簡單的 html 畫面。
+
+
+
 ### 第四章 我們用這些測試來做什麼？
 
 
