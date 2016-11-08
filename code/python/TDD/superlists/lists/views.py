@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # 在這複創造你的 view
 def home_page(request):
-    return HttpResponse()
+    return HttpResponse('<html>')

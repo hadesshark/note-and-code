@@ -84,6 +84,8 @@ Destroying test database for alias 'default'...
 
 
 
+>  原本想用 `>> info.txt` 這樣的方法來輸出結果，但無法把全部的錯誤訊息寫入。
+
 
 
 ### 第四章 我們用這些測試來做什麼？
