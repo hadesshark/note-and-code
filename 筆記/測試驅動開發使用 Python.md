@@ -120,6 +120,10 @@ selenium.common.exceptions.NoSuchElementException: Message: Unable to locate ele
 
 
 
+> 最後增加 functional 結束這一章。
+
+
+
 ### 第五章 保存使用輸入的資料
 
 
