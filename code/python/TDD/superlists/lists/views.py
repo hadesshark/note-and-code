@@ -1,4 +1,6 @@
 from django.shortcuts import render
+# from django.http import HttpResponse
 
 # 在這複創造你的 view
-home_page = None
+def home_page(request):
+    return render(request, 'home.html')
