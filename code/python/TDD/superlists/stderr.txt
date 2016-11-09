@@ -1,24 +1,5 @@
-.E.
-======================================================================
-ERROR: test_home_page_returns_correct_html (lists.tests.HomePageTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/site-packages/django/utils/datastructures.py", line 320, in __getitem__
-    list_ = super(MultiValueDict, self).__getitem__(key)
-KeyError: 'item_text'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 16, in test_home_page_returns_correct_html
-    response = home_page(request)
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 7, in home_page
-    'new_item_text': request.POST['item_text'],
-  File "/usr/local/lib/python3.5/site-packages/django/utils/datastructures.py", line 322, in __getitem__
-    raise MultiValueDictKeyError(repr(key))
-django.utils.datastructures.MultiValueDictKeyError: "'item_text'"
-
+...
 ----------------------------------------------------------------------
 Ran 3 tests in 0.007s
 
-FAILED (errors=1)
+OK
