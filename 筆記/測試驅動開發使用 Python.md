@@ -126,7 +126,9 @@ selenium.common.exceptions.NoSuchElementException: Message: Unable to locate ele
 
 ### 第五章 保存使用輸入的資料
 
+> p58 的錯誤訊息還是有問題。
 
+> 這一章開始有很多測試和書上不同（像是書上顯示錯誤，但執行後卻是正確），很有可能是版本問題，但又怕修改回原版本， firefox 又出現問題。
 
 
 
