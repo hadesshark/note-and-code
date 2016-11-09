@@ -4,11 +4,11 @@ FAIL: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "functional_test.py", line 44, in test_can_start_a_list_and_retriveve_it_later
-    table,
+    table.text,
 AssertionError: False is not true : New to-do item did not appear in table -- its text was:
-<selenium.webdriver.firefox.webelement.FirefoxWebElement (session="9ca3d157-a618-d14c-af42-f1fcb90e78e8", element="16066812-c258-204d-8752-1c9a0bec7621")>
+1:
 
 ----------------------------------------------------------------------
-Ran 1 test in 4.015s
+Ran 1 test in 3.916s
 
 FAILED (failures=1)
