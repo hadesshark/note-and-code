@@ -3,12 +3,11 @@ F
 FAIL: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_test.py", line 44, in test_can_start_a_list_and_retriveve_it_later
-    table.text,
-AssertionError: False is not true : New to-do item did not appear in table -- its text was:
-
+  File "functional_test.py", line 41, in test_can_start_a_list_and_retriveve_it_later
+    self.assertIn('1: Buy peacock feathers', [row.text for row in rows])
+AssertionError: '1: Buy peacock feathers' not found in ['']
 
 ----------------------------------------------------------------------
-Ran 1 test in 4.021s
+Ran 1 test in 3.823s
 
 FAILED (failures=1)
