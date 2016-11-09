@@ -1,13 +1,13 @@
-F
+F..
 ======================================================================
-FAIL: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
+FAIL: test_home_page_can_save_a_POST_request (lists.tests.HomePageTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_test.py", line 43, in test_can_start_a_list_and_retriveve_it_later
-    "New to-do item did not appear in table"
-AssertionError: False is not true : New to-do item did not appear in table
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 27, in test_home_page_can_save_a_POST_request
+    self.assertIn('A new list item', response.content.decode())
+AssertionError: 'A new list item' not found in '<html>\n    <head>\n        <title>To-Do lists</title>\n    </head>\n    <body>\n        <h1>Your To-Do list</h1>\n        <form>\n            <input name="item_text" id="id_new_item" placeholder="Enter a to-do item" />\n            \n        </form>\n\n        <table id="id_list_table">\n        </table>\n    </body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 1 test in 6.808s
+Ran 3 tests in 0.009s
 
 FAILED (failures=1)
