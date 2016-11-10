@@ -3,11 +3,11 @@ F
 FAIL: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_test.py", line 41, in test_can_start_a_list_and_retriveve_it_later
-    self.assertIn('1: Buy peacock feathers', [row.text for row in rows])
-AssertionError: '1: Buy peacock feathers' not found in ['']
+  File "functional_test.py", line 20, in test_can_start_a_list_and_retriveve_it_later
+    self.assertIn('To-Do', self.browser.title)
+AssertionError: 'To-Do' not found in 'TypeError at /'
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.650s
+Ran 1 test in 3.638s
 
 FAILED (failures=1)
