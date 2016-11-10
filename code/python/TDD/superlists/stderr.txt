@@ -1,14 +1,5 @@
-F
-======================================================================
-FAIL: test_can_start_a_list_and_retriveve_it_later (__main__.NewVisitorTest)
+...
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "functional_test.py", line 44, in test_can_start_a_list_and_retriveve_it_later
-    table.text,
-AssertionError: False is not true : New to-do item did not appear in table -- its text was:
-1:
+Ran 3 tests in 0.006s
 
-----------------------------------------------------------------------
-Ran 1 test in 3.916s
-
-FAILED (failures=1)
+OK
