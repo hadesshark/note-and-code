@@ -1,0 +1,4 @@
+  File "functional_tests.py", line 6
+    asert 'Django' in browser.title
+                 ^
+SyntaxError: invalid syntax
