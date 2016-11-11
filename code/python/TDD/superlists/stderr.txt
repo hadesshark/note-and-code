@@ -21,6 +21,6 @@ selenium.common.exceptions.StaleElementReferenceException: Message: The element 
 
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.668s
+Ran 1 test in 3.697s
 
 FAILED (errors=1)
