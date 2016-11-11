@@ -7,9 +7,9 @@ Traceback (most recent call last):
     self.check_for_row_in_list_table('1: Buy peacock feathers')
   File "functional_test.py", line 17, in check_for_row_in_list_table
     self.assertIn(row_text, [row.text for row in rows])
-AssertionError: '1: Buy peacock feathers' not found in []
+AssertionError: '1: Buy peacock feathers' not found in ['1:']
 
 ----------------------------------------------------------------------
-Ran 1 test in 6.776s
+Ran 1 test in 3.911s
 
 FAILED (failures=1)
