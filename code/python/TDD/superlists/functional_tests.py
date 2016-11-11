@@ -7,7 +7,7 @@ browser = webdriver.Firefox()
 browser.get('http://localhost:8000')
 
 # 她發現網頁標題與標頭題示待辦事項清單
-assert 'Django' in browser.title
+assert 'To-Do' in browser.title
 
 # 她馬上受邀輸入一個待辦事項
 
