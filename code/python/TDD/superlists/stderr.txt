@@ -1,13 +1,13 @@
-E
+F
 ======================================================================
-ERROR: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
+FAIL: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 15, in test_can_start_a_list_and_retrieve_it_later
-    browser.get('http://localhost:8000')
-NameError: name 'browser' is not defined
+  File "functional_tests.py", line 18, in test_can_start_a_list_and_retrieve_it_later
+    self.assertIn('To-Do', self.browser.title)
+AssertionError: 'To-Do' not found in 'Welcome to Django'
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.241s
+Ran 1 test in 6.442s
 
-FAILED (errors=1)
+FAILED (failures=1)

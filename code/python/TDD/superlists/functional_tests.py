@@ -12,7 +12,7 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith 聽到一個很酷的新線上待辦事項 app。
         # 她去查看它的首頁。
-        browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000')
 
         # 她發現網頁標題與標頭題示待辦事項清單
         self.assertIn('To-Do', self.browser.title)
@@ -41,7 +41,6 @@ class NewVisitorTest(unittest.TestCase):
 
         # 她很滿意地上床睡覺
 
-        browser.quit()
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
