@@ -1,4 +1,13 @@
+E
+======================================================================
+ERROR: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
+----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 10, in <module>
-    assert 'To-Do' in browser.title
-AssertionError
+  File "functional_tests.py", line 15, in test_can_start_a_list_and_retrieve_it_later
+    browser.get('http://localhost:8000')
+NameError: name 'browser' is not defined
+
+----------------------------------------------------------------------
+Ran 1 test in 3.241s
+
+FAILED (errors=1)
