@@ -1,13 +1,5 @@
-E.
-======================================================================
-ERROR: test_home_page_returns_correct_html (lists.tests.HomePageTest)
+..
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 17, in test_home_page_returns_correct_html
-    self.assertTrue(response.content.endswitch(b'</html>'))
-AttributeError: 'bytes' object has no attribute 'endswitch'
+Ran 2 tests in 0.003s
 
-----------------------------------------------------------------------
-Ran 2 tests in 0.002s
-
-FAILED (errors=1)
+OK
