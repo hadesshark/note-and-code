@@ -1,13 +1,13 @@
 F
 ======================================================================
-FAIL: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
+FAIL: test_bad_maths (lists.tests.SmokeTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 19, in test_can_start_a_list_and_retrieve_it_later
-    self.assertIn('To-Do', self.browser.title)
-AssertionError: 'To-Do' not found in 'Welcome to Django'
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 6, in test_bad_maths
+    self.assertEqual(1 + 1, 3)
+AssertionError: 2 != 3
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.766s
+Ran 1 test in 0.001s
 
 FAILED (failures=1)
