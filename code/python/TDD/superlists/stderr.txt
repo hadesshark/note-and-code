@@ -8,6 +8,6 @@ Traceback (most recent call last):
 AssertionError: False is not true : New to-do item did not appear in talbe
 
 ----------------------------------------------------------------------
-Ran 1 test in 6.786s
+Ran 1 test in 7.006s
 
 FAILED (failures=1)
