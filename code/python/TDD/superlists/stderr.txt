@@ -1,13 +1,14 @@
-E
+F
 ======================================================================
-ERROR: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
+FAIL: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 27, in test_can_start_a_list_and_retrieve_it_later
-    inputbox.get_attribute('placeholder'),
-NameError: name 'inputbox' is not defined
+  File "functional_tests.py", line 28, in test_can_start_a_list_and_retrieve_it_later
+    'Enter a to-do item'
+AssertionError: '' != 'Enter a to-do item'
++ Enter a to-do item
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.665s
+Ran 1 test in 4.660s
 
-FAILED (errors=1)
+FAILED (failures=1)
