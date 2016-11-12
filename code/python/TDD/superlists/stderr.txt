@@ -1,5 +1,14 @@
-...
+F
+======================================================================
+FAIL: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
-Ran 3 tests in 0.007s
+Traceback (most recent call last):
+  File "functional_tests.py", line 44, in test_can_start_a_list_and_retrieve_it_later
+    table.text,
+AssertionError: False is not true : New to-do item did not appear in talbe -- its text was:
+Buy peacock feathers
 
-OK
+----------------------------------------------------------------------
+Ran 1 test in 4.125s
+
+FAILED (failures=1)
