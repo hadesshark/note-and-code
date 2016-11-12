@@ -8,6 +8,6 @@ Traceback (most recent call last):
 AssertionError: '<htm[318 chars]d>A new list item</td></tr>\n        </table>\[19 chars]l>\n' != '<htm[318 chars]d>A nw list item</td></tr>\n        </table>\n[18 chars]l>\n'
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.006s
+Ran 3 tests in 0.007s
 
 FAILED (failures=1)
