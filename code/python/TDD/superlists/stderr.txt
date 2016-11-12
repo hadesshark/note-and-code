@@ -1,19 +1,17 @@
 E
 ======================================================================
-ERROR: lists.tests (unittest.loader._FailedTest)
+ERROR: test_root_url_resolves_to_home_page_view (lists.tests.HomePageTest)
 ----------------------------------------------------------------------
-ImportError: Failed to import test module: lists.tests
 Traceback (most recent call last):
-  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 428, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 369, in _get_module_from_name
-    __import__(name)
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 3, in <module>
-    from lists.views import home_page
-ImportError: cannot import name 'home_page'
-
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 8, in test_root_url_resolves_to_home_page_view
+    found = resolve('/')
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 388, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>]]}
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.000s
+Ran 1 test in 0.005s
 
 FAILED (errors=1)
