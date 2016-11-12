@@ -3,36 +3,23 @@ E
 ERROR: test_root_url_resolves_to_home_page_view (lists.tests.HomePageTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
-    return self._urlconf_module
-AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 8, in test_root_url_resolves_to_home_page_view
     found = resolve('/')
   File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
     return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
-  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 20, in <module>
-    url(r'^$', views.home_page, name='home'),
-NameError: name 'views' is not defined
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 368, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 240, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 247, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 96, in get_callable
+    mod_name, func_name = get_mod_func(lookup_view)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 159, in get_mod_func
+    dot = callback.rindex('.')
+AttributeError: 'NoneType' object has no attribute 'rindex'
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.003s
+Ran 1 test in 0.002s
 
 FAILED (errors=1)
