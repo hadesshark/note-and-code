@@ -40,7 +40,7 @@ class NewVisitorTest(unittest.TestCase):
         # 當她按下 enter 時，網頁會更新，現在網頁列出
         # "1: 購買孔雀羽毛 "，一個待辨事項清單項目
         inputbox.send_keys(Keys.ENTER)
-        self.check_for_row_in_list_table('1: Buy peacock feathers')
+        # self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
