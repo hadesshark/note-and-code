@@ -3,7 +3,9 @@ E
 ERROR: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 46, in test_can_start_a_list_and_retrieve_it_later
+  File "functional_tests.py", line 43, in test_can_start_a_list_and_retrieve_it_later
+    self.check_for_row_in_list_table('1: Buy peacock feathers')
+  File "functional_tests.py", line 16, in check_for_row_in_list_table
     rows = table.find_elements_by_tag_name('tr')
   File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webelement.py", line 237, in find_elements_by_tag_name
     return self.find_elements(by=By.TAG_NAME, value=name)
@@ -15,10 +17,10 @@ Traceback (most recent call last):
     self.error_handler.check_response(response)
   File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 192, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.StaleElementReferenceException: Message: The element reference is stale. Either the element is no longer attached to the DOM or the page has been refreshed.
+selenium.common.exceptions.InvalidSelectorException: Message: Given css selector expression "tr" is invalid: TypeError: can't access dead object
 
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.578s
+Ran 1 test in 3.730s
 
 FAILED (errors=1)
