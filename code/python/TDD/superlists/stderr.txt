@@ -1,4 +1,4 @@
-F
+.......F
 ======================================================================
 FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
@@ -8,6 +8,6 @@ Traceback (most recent call last):
 AssertionError: Finish the test!
 
 ----------------------------------------------------------------------
-Ran 1 test in 8.349s
+Ran 8 tests in 8.186s
 
 FAILED (failures=1)
