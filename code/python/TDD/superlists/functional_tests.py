@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
-
+import time
 class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
@@ -40,8 +40,8 @@ class NewVisitorTest(unittest.TestCase):
         # 當她按下 enter 時，網頁會更新，現在網頁列出
         # "1: 購買孔雀羽毛 "，一個待辨事項清單項目
         inputbox.send_keys(Keys.ENTER)
-        import time
         time.sleep(2)
+
         self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         # 此時仍然有一圈文字方塊，讓她可以加入另一個項目。
