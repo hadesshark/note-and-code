@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
     def test_can_start_a_list_and_retrieve_it_later(self):
         # Edith 聽到一個很酷的新線上待辦事項 app。
         # 她去查看它的首頁。
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:4444')
 
         # 她發現網頁標題與標頭題示待辦事項清單
         self.assertIn('To-Do', self.browser.title)
@@ -40,6 +40,8 @@ class NewVisitorTest(unittest.TestCase):
         # 當她按下 enter 時，網頁會更新，現在網頁列出
         # "1: 購買孔雀羽毛 "，一個待辨事項清單項目
         inputbox.send_keys(Keys.ENTER)
+        import time
+        time.sleep(2)
         self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         # 此時仍然有一圈文字方塊，讓她可以加入另一個項目。
@@ -47,6 +49,7 @@ class NewVisitorTest(unittest.TestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Use peacock feathers to make a fly')
         inputbox.send_keys(Keys.ENTER)
+        time.sleep(2)
 
         # 網頁再次更新，現在她的清單有這兩個項目
         self.check_for_row_in_list_table('1: Buy peacock feathers')
