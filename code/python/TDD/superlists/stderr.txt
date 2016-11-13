@@ -1,13 +1,5 @@
-E...
-======================================================================
-ERROR: test_home_page_can_save_a_POST_request (lists.tests.HomePageTest)
+....
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 29, in test_home_page_can_save_a_POST_request
-    self.assertEqual(new_item_text, 'A new list item')
-NameError: name 'new_item_text' is not defined
+Ran 4 tests in 0.009s
 
-----------------------------------------------------------------------
-Ran 4 tests in 0.010s
-
-FAILED (errors=1)
+OK

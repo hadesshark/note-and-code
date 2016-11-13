@@ -25,8 +25,8 @@ class HomePageTest(TestCase):
         response = home_page(request)
 
         self.assertEqual(Item.objects.count(), 1)
-        mew_item = Item.objects.first()
-        self.assertEqual(new_item_text, 'A new list item')
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text, 'A new list item')
 
         self.assertIn('A new list item', response.content.decode())
         expected_html = render_to_string(
