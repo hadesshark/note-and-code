@@ -17,10 +17,10 @@ Traceback (most recent call last):
     self.error_handler.check_response(response)
   File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/errorhandler.py", line 192, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: Given css selector expression "tr" is invalid: TypeError: can't access dead object
+selenium.common.exceptions.StaleElementReferenceException: Message: The element reference is stale. Either the element is no longer attached to the DOM or the page has been refreshed.
 
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.730s
+Ran 1 test in 3.653s
 
 FAILED (errors=1)
