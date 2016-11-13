@@ -1,13 +1,13 @@
-.......F
+F
 ======================================================================
 FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 63, in test_can_start_a_list_and_retrieve_it_later
-    self.fail('Finish the test!')
-AssertionError: Finish the test!
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 45, in test_can_start_a_list_and_retrieve_it_later
+    self.assertRegex(edith_list_url, '/lists/.+')
+AssertionError: Regex didn't match: '/lists/.+' not found in 'http://localhost:8081/'
 
 ----------------------------------------------------------------------
-Ran 8 tests in 8.186s
+Ran 1 test in 3.984s
 
 FAILED (failures=1)
