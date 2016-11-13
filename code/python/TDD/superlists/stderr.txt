@@ -5,12 +5,12 @@ ERROR: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
 Traceback (most recent call last):
   File "functional_tests.py", line 43, in test_can_start_a_list_and_retrieve_it_later
     self.check_for_row_in_list_table('1: Buy peacock feathers')
-  File "functional_tests.py", line 17, in check_for_row_in_list_table
-    self.assertIn(row_text, [row.text for row in rows])
-  File "functional_tests.py", line 17, in <listcomp>
-    self.assertIn(row_text, [row.text for row in rows])
-  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webelement.py", line 73, in text
-    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "functional_tests.py", line 16, in check_for_row_in_list_table
+    rows = table.find_elements_by_tag_name('tr')
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webelement.py", line 237, in find_elements_by_tag_name
+    return self.find_elements(by=By.TAG_NAME, value=name)
+  File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webelement.py", line 528, in find_elements
+    {"using": by, "value": value})['value']
   File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webelement.py", line 494, in _execute
     return self._parent.execute(command, params)
   File "/usr/local/lib/python3.5/site-packages/selenium/webdriver/remote/webdriver.py", line 236, in execute
@@ -21,6 +21,6 @@ selenium.common.exceptions.StaleElementReferenceException: Message: The element 
 
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.644s
+Ran 1 test in 3.743s
 
 FAILED (errors=1)
