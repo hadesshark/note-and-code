@@ -1,13 +1,13 @@
 F
 ======================================================================
-FAIL: test_can_start_a_list_and_retrieve_it_later (__main__.NewVisitorTest)
+FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "functional_tests.py", line 62, in test_can_start_a_list_and_retrieve_it_later
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 63, in test_can_start_a_list_and_retrieve_it_later
     self.fail('Finish the test!')
 AssertionError: Finish the test!
 
 ----------------------------------------------------------------------
-Ran 1 test in 7.657s
+Ran 1 test in 8.349s
 
 FAILED (failures=1)
