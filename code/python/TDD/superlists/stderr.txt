@@ -1,15 +1,5 @@
-......F.
-======================================================================
-FAIL: test_displays_all_items (lists.tests.ListViewTest)
+........
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 79, in test_displays_all_items
-    self.assertContains(response, 'itemey 1')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 358, in assertContains
-    msg_prefix + "Couldn't find %s in response" % text_repr)
-AssertionError: False is not true : Couldn't find 'itemey 1' in response
+Ran 8 tests in 0.034s
 
-----------------------------------------------------------------------
-Ran 8 tests in 0.029s
-
-FAILED (failures=1)
+OK
