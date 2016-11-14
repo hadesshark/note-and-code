@@ -3,13 +3,11 @@ F
 FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 60, in test_can_start_a_list_and_retrieve_it_later
-    self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 18, in check_for_row_in_list_table
-    self.assertIn(row_text, [row.text for row in rows])
-AssertionError: '2: Use peacock feathers to make a fly' not found in ['1: Buy peacock feathers']
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 85, in test_can_start_a_list_and_retrieve_it_later
+    self.assertNotEqual(francis_list_url, edith_list_url)
+AssertionError: 'http://localhost:8081/lists/the-only-list-in-the-world/' == 'http://localhost:8081/lists/the-only-list-in-the-world/'
 
 ----------------------------------------------------------------------
-Ran 1 test in 10.473s
+Ran 1 test in 15.842s
 
 FAILED (failures=1)
