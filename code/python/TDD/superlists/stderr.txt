@@ -1,13 +1,17 @@
-F
+.......F
 ======================================================================
-FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
+FAIL: test_displays_all_items (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 45, in test_can_start_a_list_and_retrieve_it_later
-    self.assertRegex(edith_list_url, '/lists/.+')
-AssertionError: Regex didn't match: '/lists/.+' not found in 'http://localhost:8081/'
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 85, in test_displays_all_items
+    self.assertContains(response, 'itemey 1')
+  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 350, in assertContains
+    response, text, status_code, msg_prefix, html)
+  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 320, in _assert_contains
+    " (expected %d)" % (response.status_code, status_code))
+AssertionError: 404 != 200 : Couldn't retrieve content: Response code was 404 (expected 200)
 
 ----------------------------------------------------------------------
-Ran 1 test in 4.016s
+Ran 8 tests in 0.025s
 
 FAILED (failures=1)
