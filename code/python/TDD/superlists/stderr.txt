@@ -1,17 +1,191 @@
-.......F
+E..E.E.E
 ======================================================================
-FAIL: test_displays_all_items (lists.tests.ListViewTest)
+ERROR: test_home_page_can_save_a_POST_request (lists.tests.HomePageTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 85, in test_displays_all_items
-    self.assertContains(response, 'itemey 1')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 350, in assertContains
-    response, text, status_code, msg_prefix, html)
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 320, in _assert_contains
-    " (expected %d)" % (response.status_code, status_code))
-AssertionError: 404 != 200 : Couldn't retrieve content: Response code was 404 (expected 200)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 25, in test_home_page_can_save_a_POST_request
+    response = home_page(request)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 9, in home_page
+    return redirect('/lists/the-only-list-in-the-world/')
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 116, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 205, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 433, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 285, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 23, in <module>
+    url(r'^lists/the-only-list-in-the-world/$', views.view_list, name='view_list')
+AttributeError: module 'lists.views' has no attribute 'view_list'
+
+======================================================================
+ERROR: test_home_page_redirects_after_POST (lists.tests.HomePageTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 36, in test_home_page_redirects_after_POST
+    response = home_page(request)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 9, in home_page
+    return redirect('/lists/the-only-list-in-the-world/')
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 116, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 205, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 433, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 285, in _populate
+    for pattern in reversed(self.url_patterns):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 23, in <module>
+    url(r'^lists/the-only-list-in-the-world/$', views.view_list, name='view_list')
+AttributeError: module 'lists.views' has no attribute 'view_list'
+
+======================================================================
+ERROR: test_root_url_resolves_to_home_page_view (lists.tests.HomePageTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 11, in test_root_url_resolves_to_home_page_view
+    found = resolve('/')
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 23, in <module>
+    url(r'^lists/the-only-list-in-the-world/$', views.view_list, name='view_list')
+AttributeError: module 'lists.views' has no attribute 'view_list'
+
+======================================================================
+ERROR: test_displays_all_items (lists.tests.ListViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 23, in <module>
+    url(r'^lists/the-only-list-in-the-world/$', views.view_list, name='view_list')
+AttributeError: module 'lists.views' has no attribute 'view_list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 83, in test_displays_all_items
+    response = self.client.get('/lists/the-only-list-in-the-world/')
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
+    **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
+    return self.generic('GET', path, secure=secure, **r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 23, in <module>
+    url(r'^lists/the-only-list-in-the-world/$', views.view_list, name='view_list')
+AttributeError: module 'lists.views' has no attribute 'view_list'
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.025s
+Ran 8 tests in 0.028s
 
-FAILED (failures=1)
+FAILED (errors=4)
