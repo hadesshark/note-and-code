@@ -1,25 +1,5 @@
-.......E
-======================================================================
-ERROR: test_displays_all_items (lists.tests.ListViewTest)
+........
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 83, in test_displays_all_items
-    response = self.client.get('/lists/the-only-list-in-the-world/')
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
-    **extra)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
-    return self.generic('GET', path, secure=secure, **r)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
-    return self.request(**r)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
-    six.reraise(*exc_info)
-  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 151, in get_response
-    % (callback.__module__, view_name))
-ValueError: The view lists.views.view_list didn't return an HttpResponse object. It returned None instead.
+Ran 8 tests in 0.025s
 
-----------------------------------------------------------------------
-Ran 8 tests in 0.027s
-
-FAILED (errors=1)
+OK
