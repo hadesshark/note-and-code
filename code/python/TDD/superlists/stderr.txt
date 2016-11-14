@@ -1,15 +1,61 @@
-.......F
+......EE
 ======================================================================
-FAIL: test_uses_list_template (lists.tests.ListViewTest)
+ERROR: test_displays_all_items (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 71, in test_uses_list_template
-    self.assertTemplateUsed(response, 'list.html')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 543, in assertTemplateUsed
-    (template_name, ', '.join(template_names)))
-AssertionError: False is not true : Template 'list.html' was not a template used to render the response. Actual template(s) used: home.html
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 77, in test_displays_all_items
+    response = self.client.get('/lists/the-only-list-in-the-world/')
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
+    **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
+    return self.generic('GET', path, secure=secure, **r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 16, in view_list
+    return render(request, 'list.html', {'items': items})
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python3.5/site-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.5/site-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+django.template.base.TemplateDoesNotExist: list.html
+
+======================================================================
+ERROR: test_uses_list_template (lists.tests.ListViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 70, in test_uses_list_template
+    response = self.client.get('/lists/the-only-list-in-the-world/')
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
+    **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
+    return self.generic('GET', path, secure=secure, **r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 16, in view_list
+    return render(request, 'list.html', {'items': items})
+  File "/usr/local/lib/python3.5/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python3.5/site-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.5/site-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+django.template.base.TemplateDoesNotExist: list.html
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.028s
+Ran 8 tests in 0.033s
 
-FAILED (failures=1)
+FAILED (errors=2)
