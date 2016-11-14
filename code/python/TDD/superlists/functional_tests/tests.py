@@ -41,6 +41,7 @@ class NewVisitorTest(LiveServerTestCase):
         # 當她按下 enter 時，網頁會更新，現在網頁列出
         # "1: 購買孔雀羽毛 "，一個待辨事項清單項目
         inputbox.send_keys(Keys.ENTER)
+        time.sleep(2)
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists/.+')
 
@@ -75,11 +76,11 @@ class NewVisitorTest(LiveServerTestCase):
         # 他比 Edith 無趣…
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Buy milk')
-        inputbox.send_keys('Keys.ENTER')
+        inputbox.send_keys(Keys.ENTER)
 
         # Francis 取得他自己的獨一無二 URL
         francis_list_url = self.browser.current_url
-        self.assertRegex(francis_list_url, '/list/.+')
+        self.assertRegex(francis_list_url, '/lists/.+')
         self.assertNotEqual(francis_list_url, edith_list_url)
 
         # 同樣的，沒有 Edith 的清單的任何跡象
@@ -88,7 +89,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn('Buy milk', page_text)
 
         # 他很滿意，都回去睡覺了
-        
+
         # 她前往那個 URL - 她的待辦清單仍然在那裡。
 
         # 她很滿意地上床睡覺
