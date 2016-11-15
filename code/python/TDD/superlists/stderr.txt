@@ -1,45 +1,25 @@
-......EE
+......FF
 ======================================================================
-ERROR: test_redirects_after_POST (lists.tests.NewListTest)
+FAIL: test_redirects_after_POST (lists.tests.NewListTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 76, in test_redirects_after_POST
-    data={'item_text': 'A new list item'}
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
-    secure=secure, **extra)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
-    secure=secure, **extra)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
-    return self.request(**r)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
-    six.reraise(*exc_info)
-  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 151, in get_response
-    % (callback.__module__, view_name))
-ValueError: The view lists.views.new_list didn't return an HttpResponse object. It returned None instead.
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 79, in test_redirects_after_POST
+    self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')
+AssertionError: 'http://testserver/lists/the-only-list-in-the-world/' != '/lists/the-only-list-in-the-world/'
+- http://testserver/lists/the-only-list-in-the-world/
+? -----------------
++ /lists/the-only-list-in-the-world/
+
 
 ======================================================================
-ERROR: test_saving_a_POST_request (lists.tests.NewListTest)
+FAIL: test_saving_a_POST_request (lists.tests.NewListTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 67, in test_saving_a_POST_request
-    data={'item_text': 'A new list item'}
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
-    secure=secure, **extra)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
-    secure=secure, **extra)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
-    return self.request(**r)
-  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
-    six.reraise(*exc_info)
-  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 151, in get_response
-    % (callback.__module__, view_name))
-ValueError: The view lists.views.new_list didn't return an HttpResponse object. It returned None instead.
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 69, in test_saving_a_POST_request
+    self.assertEqual(Item.objects.count(), 1)
+AssertionError: 0 != 1
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.035s
+Ran 8 tests in 0.025s
 
-FAILED (errors=2)
+FAILED (failures=2)
