@@ -1,13 +1,21 @@
-F
+......FF
 ======================================================================
-FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
+FAIL: test_redirects_after_POST (lists.tests.NewListTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 85, in test_can_start_a_list_and_retrieve_it_later
-    self.assertNotEqual(francis_list_url, edith_list_url)
-AssertionError: 'http://localhost:8081/lists/the-only-list-in-the-world/' == 'http://localhost:8081/lists/the-only-list-in-the-world/'
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 78, in test_redirects_after_POST
+    self.assertEqual(response.status_code, 302)
+AssertionError: 404 != 302
+
+======================================================================
+FAIL: test_saving_a_POST_request (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 69, in test_saving_a_POST_request
+    self.assertEqual(Item.objects.count(), 1)
+AssertionError: 0 != 1
 
 ----------------------------------------------------------------------
-Ran 1 test in 15.842s
+Ran 8 tests in 0.032s
 
-FAILED (failures=1)
+FAILED (failures=2)
