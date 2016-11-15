@@ -1,17 +1,5 @@
-......F.
-======================================================================
-FAIL: test_redirects_after_POST (lists.tests.NewListTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 79, in test_redirects_after_POST
-    self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')
-AssertionError: 'http://testserver/lists/the-only-list-in-the-world/' != '/lists/the-only-list-in-the-world/'
-- http://testserver/lists/the-only-list-in-the-world/
-? -----------------
-+ /lists/the-only-list-in-the-world/
-
-
+........
 ----------------------------------------------------------------------
 Ran 8 tests in 0.030s
 
-FAILED (failures=1)
+OK
