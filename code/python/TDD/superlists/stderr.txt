@@ -1,4 +1,4 @@
-......FF
+......F.
 ======================================================================
 FAIL: test_redirects_after_POST (lists.tests.NewListTest)
 ----------------------------------------------------------------------
@@ -11,15 +11,7 @@ AssertionError: 'http://testserver/lists/the-only-list-in-the-world/' != '/lists
 + /lists/the-only-list-in-the-world/
 
 
-======================================================================
-FAIL: test_saving_a_POST_request (lists.tests.NewListTest)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 69, in test_saving_a_POST_request
-    self.assertEqual(Item.objects.count(), 1)
-AssertionError: 0 != 1
+Ran 8 tests in 0.030s
 
-----------------------------------------------------------------------
-Ran 8 tests in 0.025s
-
-FAILED (failures=2)
+FAILED (failures=1)
