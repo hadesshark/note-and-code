@@ -28,6 +28,23 @@ https://tommy60703.gitbooks.io/swift-language-traditional-chinese/content/
 
 > `for` 迴圈需要大括號。
 
+> 有 `switch case default` 可以使用。
+>
+> 可以不寫 `break` 程式會自動退出。
+
+> `func` 為函式宣告。
+
+~~~swift
+func greet(name: String, day: String) -> String {
+    return "Hello \(name), today is \(day)."
+}
+greet("Bob", "Tuesday")
+~~~
+
+> 可以使用 `tuple` 回傳多個值
+
+> 函式是一種特殊閉包（closure）。
+
 
 
 
