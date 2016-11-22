@@ -1,20 +1,123 @@
-E
+......EE
 ======================================================================
-ERROR: lists.tests (unittest.loader._FailedTest)
+ERROR: test_redirects_after_POST (lists.tests.NewListTest)
 ----------------------------------------------------------------------
-ImportError: Failed to import test module: lists.tests
 Traceback (most recent call last):
-  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 428, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 369, in _get_module_from_name
-    __import__(name)
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 69
-    Item.objects.create(text='itemey 1', list=list_)
-                                                   ^
-TabError: inconsistent use of tabs and spaces in indentation
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: lists_item.list_id
 
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 92, in test_redirects_after_POST
+    data={'item_text': 'A new list item'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 14, in new_list
+    Item.objects.create(text=request.POST['item_text'])
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: lists_item.list_id
+
+======================================================================
+ERROR: test_saving_a_POST_request (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: lists_item.list_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 83, in test_saving_a_POST_request
+    data={'item_text': 'A new list item'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 466, in request
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/views.py", line 14, in new_list
+    Item.objects.create(text=request.POST['item_text'])
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/query.py", line 348, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python3.5/site-packages/django/utils/six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: lists_item.list_id
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.000s
+Ran 8 tests in 0.043s
 
-FAILED (errors=1)
+FAILED (errors=2)
