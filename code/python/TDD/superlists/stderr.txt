@@ -1,5 +1,13 @@
-........
+F
+======================================================================
+FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
-Ran 8 tests in 0.026s
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 85, in test_can_start_a_list_and_retrieve_it_later
+    self.assertNotEqual(francis_list_url, edith_list_url)
+AssertionError: 'http://localhost:8081/lists/the-only-list-in-the-world/' == 'http://localhost:8081/lists/the-only-list-in-the-world/'
 
-OK
+----------------------------------------------------------------------
+Ran 1 test in 16.419s
+
+FAILED (failures=1)
