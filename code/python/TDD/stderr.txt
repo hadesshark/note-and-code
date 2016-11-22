@@ -1,0 +1,1 @@
+/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/Resources/Python.app/Contents/MacOS/Python: can't open file 'manage.py': [Errno 2] No such file or directory
