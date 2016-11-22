@@ -1,13 +1,19 @@
-F
+E
 ======================================================================
-FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
+ERROR: lists.tests (unittest.loader._FailedTest)
 ----------------------------------------------------------------------
+ImportError: Failed to import test module: lists.tests
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 85, in test_can_start_a_list_and_retrieve_it_later
-    self.assertNotEqual(francis_list_url, edith_list_url)
-AssertionError: 'http://localhost:8081/lists/the-only-list-in-the-world/' == 'http://localhost:8081/lists/the-only-list-in-the-world/'
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 428, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/unittest/loader.py", line 369, in _get_module_from_name
+    __import__(name)
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 6, in <module>
+    from lists.models import Item, List
+ImportError: cannot import name 'List'
+
 
 ----------------------------------------------------------------------
-Ran 1 test in 16.009s
+Ran 1 test in 0.000s
 
-FAILED (failures=1)
+FAILED (errors=1)
