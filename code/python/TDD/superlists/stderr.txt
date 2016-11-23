@@ -1,23 +1,488 @@
-......F.F.
+..E.EEEEEE
 ======================================================================
-FAIL: test_can_save_a_POST_request_to_an_existing_list (lists.tests.NewListTest)
+ERROR: test_root_url_resolves_to_home_page_view (lists.tests.HomePageTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 101, in test_can_save_a_POST_request_to_an_existing_list
-    self.assertEqual(Item.objects.count(), 1)
-AssertionError: 0 != 1
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 20, in test_root_url_resolves_to_home_page_view
+    found = resolve('/')
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
 
 ======================================================================
-FAIL: test_redirects_to_list_view (lists.tests.NewListTest)
+ERROR: test_displays_only_items_for_that_list (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 114, in test_redirects_to_list_view
-    self.assertRedirects(response, '/lists/%d/' % (correct_list.id,))
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 283, in assertRedirects
-    (response.status_code, status_code))
-AssertionError: 404 != 302 : Response didn't redirect as expected: Response code was 404 (expected 302)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 83, in test_displays_only_items_for_that_list
+    response = self.client.get('/lists/%d/' % (correct_list.id,))
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
+    **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
+    return self.generic('GET', path, secure=secure, **r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+======================================================================
+ERROR: test_uses_list_template (lists.tests.ListViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 72, in test_uses_list_template
+    response = self.client.get('/lists/%d/' % (list_.id,))
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 500, in get
+    **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 303, in get
+    return self.generic('GET', path, secure=secure, **r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+======================================================================
+ERROR: test_can_save_a_POST_request_to_an_existing_list (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 98, in test_can_save_a_POST_request_to_an_existing_list
+    data={'item_text': 'A new item for an existing list'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+======================================================================
+ERROR: test_redirects_after_POST (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 128, in test_redirects_after_POST
+    data={'item_text': 'A new list item'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+======================================================================
+ERROR: test_redirects_to_list_view (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 111, in test_redirects_to_list_view
+    data={'item_text': 'A new item for an existing list'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+======================================================================
+ERROR: test_saving_a_POST_request (lists.tests.NewListTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python3.5/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 394, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 119, in test_saving_a_POST_request
+    data={'item_text': 'A new list item'}
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 512, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 313, in post
+    secure=secure, **extra)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 379, in generic
+    return self.request(**r)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 448, in request
+    response = self.handler(environ)
+  File "/usr/local/lib/python3.5/site-packages/django/test/client.py", line 122, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/local/lib/python3.5/site-packages/django/core/handlers/base.py", line 264, in handle_uncaught_exception
+    if resolver.urlconf_module is None:
+  File "/usr/local/lib/python3.5/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/Cellar/python3/3.5.2_1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/superlists/urls.py", line 25, in <module>
+    url(r'^lists/(\d+)/add_item$', views.add_item, name='add_item')
+AttributeError: module 'lists.views' has no attribute 'add_item'
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.044s
+Ran 10 tests in 0.045s
 
-FAILED (failures=2)
+FAILED (errors=7)
