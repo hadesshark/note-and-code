@@ -1,15 +1,5 @@
-....F...
-======================================================================
-FAIL: test_displays_only_items_for_that_list (lists.tests.ListViewTest)
+........
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 87, in test_displays_only_items_for_that_list
-    self.assertNotContains(response, 'other list item 1')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 371, in assertNotContains
-    msg_prefix + "Response should not contain %s" % text_repr)
-AssertionError: 1 != 0 : Response should not contain 'other list item 1'
+Ran 8 tests in 0.036s
 
-----------------------------------------------------------------------
-Ran 8 tests in 0.032s
-
-FAILED (failures=1)
+OK
