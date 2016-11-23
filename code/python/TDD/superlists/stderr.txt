@@ -1,27 +1,15 @@
-....FF..
+....F...
 ======================================================================
 FAIL: test_displays_only_items_for_that_list (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 85, in test_displays_only_items_for_that_list
-    self.assertContains(response, 'itemey 1')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 350, in assertContains
-    response, text, status_code, msg_prefix, html)
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 320, in _assert_contains
-    " (expected %d)" % (response.status_code, status_code))
-AssertionError: 404 != 200 : Couldn't retrieve content: Response code was 404 (expected 200)
-
-======================================================================
-FAIL: test_uses_list_template (lists.tests.ListViewTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 73, in test_uses_list_template
-    self.assertTemplateUsed(response, 'list.html')
-  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 539, in assertTemplateUsed
-    self.fail(msg_prefix + "No templates used to render the response")
-AssertionError: No templates used to render the response
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 87, in test_displays_only_items_for_that_list
+    self.assertNotContains(response, 'other list item 1')
+  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 371, in assertNotContains
+    msg_prefix + "Response should not contain %s" % text_repr)
+AssertionError: 1 != 0 : Response should not contain 'other list item 1'
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.042s
+Ran 8 tests in 0.033s
 
-FAILED (failures=2)
+FAILED (failures=1)
