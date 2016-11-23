@@ -1,5 +1,15 @@
-........
+F
+======================================================================
+FAIL: test_can_start_a_list_and_retrieve_it_later (functional_tests.tests.NewVisitorTest)
 ----------------------------------------------------------------------
-Ran 8 tests in 0.036s
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 71, in test_can_start_a_list_and_retrieve_it_later
+    self.check_for_row_in_list_table('1: Buy peacock feathers')
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 27, in check_for_row_in_list_table
+    self.assertIn(row_text, [row.text for row in rows])
+AssertionError: '1: Buy peacock feathers' not found in ['1: Use peacock feathers to make a fly']
 
-OK
+----------------------------------------------------------------------
+Ran 1 test in 10.865s
+
+FAILED (failures=1)
