@@ -15,9 +15,9 @@ Traceback (most recent call last):
     self.assertRedirects(response, '/lists/%d/' % (correct_list.id,))
   File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 283, in assertRedirects
     (response.status_code, status_code))
-AssertionError: 301 != 302 : Response didn't redirect as expected: Response code was 301 (expected 302)
+AssertionError: 404 != 302 : Response didn't redirect as expected: Response code was 404 (expected 302)
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.042s
+Ran 10 tests in 0.044s
 
 FAILED (failures=2)
