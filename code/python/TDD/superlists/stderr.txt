@@ -5,9 +5,11 @@ ERROR: test_passes_correct_list_to_template (lists.tests.ListViewTest)
 Traceback (most recent call last):
   File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 94, in test_passes_correct_list_to_template
     self.assertEqual(response.context['list'], correct_list)
-TypeError: 'NoneType' object is not subscriptable
+  File "/usr/local/lib/python3.5/site-packages/django/template/context.py", line 71, in __getitem__
+    raise KeyError(key)
+KeyError: 'list'
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.065s
+Ran 11 tests in 0.058s
 
 FAILED (errors=1)
