@@ -1,10 +1,16 @@
+"""
+function test.
+"""
+
 import time
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 class NewVisitorTest(LiveServerTestCase):
-
+    """
+    new visitor test.
+    """
     def setUp(self):
         self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(3)
@@ -13,11 +19,17 @@ class NewVisitorTest(LiveServerTestCase):
         self.browser.quit()
 
     def check_for_row_in_list_table(self, row_text):
+        '''
+        check tr list.
+        '''
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertIn(row_text, [row.text for row in rows])
 
     def test_can_start_a_list_and_retrieve_it_later(self):
+        '''
+        try do something.
+        '''
         # Edith 聽到一個很酷的新線上待辦事項 app。
         # 她去查看它的首頁。
         self.browser.get(self.live_server_url)
