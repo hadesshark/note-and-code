@@ -1,15 +1,15 @@
-.....E.....
+....F......
 ======================================================================
-ERROR: test_passes_correct_list_to_template (lists.tests.ListViewTest)
+FAIL: test_displays_only_items_for_that_list (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 94, in test_passes_correct_list_to_template
-    self.assertEqual(response.context['list'], correct_list)
-  File "/usr/local/lib/python3.5/site-packages/django/template/context.py", line 71, in __getitem__
-    raise KeyError(key)
-KeyError: 'list'
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 85, in test_displays_only_items_for_that_list
+    self.assertContains(response, 'itemey 1')
+  File "/usr/local/lib/python3.5/site-packages/django/test/testcases.py", line 358, in assertContains
+    msg_prefix + "Couldn't find %s in response" % text_repr)
+AssertionError: False is not true : Couldn't find 'itemey 1' in response
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.058s
+Ran 11 tests in 0.054s
 
-FAILED (errors=1)
+FAILED (failures=1)
