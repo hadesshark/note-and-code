@@ -1,5 +1,13 @@
-..........
+.....E.....
+======================================================================
+ERROR: test_passes_correct_list_to_template (lists.tests.ListViewTest)
 ----------------------------------------------------------------------
-Ran 10 tests in 0.062s
+Traceback (most recent call last):
+  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/lists/tests.py", line 94, in test_passes_correct_list_to_template
+    self.assertEqual(response.context['list'], correct_list)
+TypeError: 'NoneType' object is not subscriptable
 
-OK
+----------------------------------------------------------------------
+Ran 11 tests in 0.065s
+
+FAILED (errors=1)
