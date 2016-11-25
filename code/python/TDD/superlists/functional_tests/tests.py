@@ -106,3 +106,19 @@ class NewVisitorTest(LiveServerTestCase):
         # 她前往那個 URL - 她的待辦清單仍然在那裡。
 
         # 她很滿意地上床睡覺
+
+    def test_layout_and_styling(self):
+        """
+        css size ... test.
+        """
+        # Edith 前往首頁
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024, 768)
+
+        # 她發現輸入方塊已被妥善地置中
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=5
+        )
