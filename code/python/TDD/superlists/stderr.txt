@@ -1,13 +1,5 @@
-.F
-======================================================================
-FAIL: test_layout_and_styling (functional_tests.tests.NewVisitorTest)
+..
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/hadesshark/note-and-code/code/python/TDD/superlists/functional_tests/tests.py", line 123, in test_layout_and_styling
-    delta=5
-AssertionError: 83.66666412353517 != 512 within 5 delta
+Ran 2 tests in 20.245s
 
-----------------------------------------------------------------------
-Ran 2 tests in 21.460s
-
-FAILED (failures=1)
+OK
