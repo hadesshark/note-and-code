@@ -122,3 +122,13 @@ class NewVisitorTest(LiveServerTestCase):
             512,
             delta=5
         )
+
+        # 她開始編輯一個新清單，看到這裡的
+        # 輸入欄位也妥善地置中
+        inputbox.send_keys('testing\n')
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=5
+        )
